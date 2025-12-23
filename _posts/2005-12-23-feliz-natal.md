@@ -2,8 +2,8 @@
 layout: email
 title: "Uma pausa merecida… Feliz Natal! 🎄✨"
 description: "Que o amor seja o combustível do seu próximo ano."
-tags: [data comemorativa]
-date: 2025-12-23
+tags: [data-comemorativa]
+date: 2025-12-24
 ---
 
 **Assunto:** Uma pausa merecida… Feliz Natal! 🎄✨

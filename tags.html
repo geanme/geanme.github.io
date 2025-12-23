@@ -4,12 +4,9 @@ title: "Tags"
 permalink: /tags.html
 ---
 <h1>Arquivos por tag</h1>
-
 {% for tag in site.tags %}
   <section id="{{ tag[0] }}" style="margin-bottom:40px;">
-
     <h2>#{{ tag[0] }}</h2>
-
     <ul>
       {% for post in tag[1] %}
         <li>
@@ -20,6 +17,5 @@ permalink: /tags.html
         </li>
       {% endfor %}
     </ul>
-
   </section>
 {% endfor %}
