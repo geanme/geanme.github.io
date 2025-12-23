@@ -1,0 +1,43 @@
+title: "Looking for Work"
+description: "descricao em breve"
+
+# URLs
+url: "https://geanme.github.io"
+baseurl: ""
+
+# Permalinks
+permalink: /:title.html
+
+# Imagem padrão (OG / email preview)
+image: "https://d15k2d11r6t6rl.cloudfront.net/pub/bfra/mc32312m/m17/9r2/5eg/data-cta.png"
+# image: "https://picsum.photos/600/363"
+
+# Build
+theme: minima
+markdown: kramdown
+paginate: 10
+
+# Idioma
+lang: pt-BR
+
+# Plugins compatíveis com GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: email
+
+# Dados institucionais
+company:
+  name: "OX Indústria de Produtos Químicos LTDA"
+  address: "Rua Dois, nº 69 - Titanlândia - Castanhal/PA"
+  cep: "CEP: 68741-492"
+  website: "https://souox.com/"
+
+
+

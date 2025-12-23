@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  {% include head.html %}
+  <body style="margin:0;padding:0;">
+
+    <!-- Header do site (logo / topo simples) -->
+    {% include header.html %}
+
+    <!-- Conteúdo da página -->
+    <main style="max-width:960px;margin:40px auto;padding:0 20px;font-family:Arial, sans-serif;">
+      <h1>{{ page.title }}</h1>
+
+      {{ content }}
+    </main>
+
+    <!-- Rodapé institucional -->
+    {% include footer.html %}
+
+  </body>
+</html>
