@@ -1,36 +1,69 @@
 ---
-layout: page
-title: "home"
+permalink: /
 ---
 <!DOCTYPE html>
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="pt-BR">
-  {% include head.html %}
-<body class="body" style="margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none; background-color: #ffffff;">
-<div class="preheader" 
-     style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
-  {{ page.description }}
+<head>
+	<title>Arquivo de Emails</title>
+	<link rel="shortcut icon" href="https://gean.me/img/kzx-favicon.ico" type="image/x-icon">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Arquivo de todos os emails enviados">
+	<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css">
+	<link href="https://gean.me/css/souox-mail.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="body" style="margin: 0; padding: 0; background-color: #ffffff;">
+
+<div class="preheader" style="display:none;font-size:1px;color:#333;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+Arquivo de Emails
 </div>
 
-<div class="preheader" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">{description}</div>
-	<table class="nl-container" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff;">
-		<tbody>
-			<tr>
-				<td>
-					<table class="row row-1" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-						<tbody>
-							<tr>
-								<td>
-          {% include header.html %}
-          {{ content }}
-								</td>
-							</tr>
-						</tbody>
-					</table>
-          {% include social.html %}
-          {% include footer.html %}
-				</td>
-			</tr>
-		</tbody>
-	</table><!-- End -->
+<table class="nl-container" width="100%" cellpadding="0" cellspacing="0" style="background-color:#ffffff;">
+<tr>
+<td>
+
+<!-- CONTAINER -->
+<table align="center" width="480" cellpadding="10" cellspacing="0" style="margin:0 auto;">
+<tr>
+<td style="font-family:'Google Sans', Arial, sans-serif; color:#444;">
+
+<h2 style="text-align:center;color:#15c;">Arquivo de Emails</h2>
+<p style="text-align:center;">Confira abaixo todos os emails enviados.</p>
+
+<hr style="border:none;border-top:1px solid #eee;margin:20px 0;">
+
+{% assign posts_sorted = site.posts | sort: "date" | reverse %}
+{% for post in posts_sorted %}
+
+<p style="margin-bottom:16px;">
+	<strong>
+		<a href="{{ post.url }}" style="color:#15c;text-decoration:none;">
+			{{ post.title }}
+		</a>
+	</strong><br>
+
+	<small style="color:#888;">
+		{{ post.date | date: "%d/%m/%Y" }}
+		{% if post.tags %}
+			—
+			{% for tag in post.tags %}
+				<a href="/tags.html#{{ tag }}" style="color:#888;text-decoration:none;">#{{ tag }}</a>
+			{% endfor %}
+		{% endif %}
+	</small>
+</p>
+
+{% endfor %}
+
+</td>
+</tr>
+</table>
+<!-- /CONTAINER -->
+
+</td>
+</tr>
+</table>
+
 </body>
 </html>
